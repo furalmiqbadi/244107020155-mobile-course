@@ -1,5 +1,6 @@
 # dashboard-responsif
 ![dashboard-responsif](lib/dashboard-responsif.dart)
+<img src="screenshots/resposifitas.png" alt="tugas-utama" style="max-width: 500px; width: 100%;"/>
 
 # eksperime-warm-up
 ![tugas-utama](lib/eksperime-warm-up.dart)
