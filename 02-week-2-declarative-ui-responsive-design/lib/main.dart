@@ -108,6 +108,7 @@ class DashboardPage extends StatelessWidget {
             //untuk layar lebarr
             if (isWide) {
               return Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   //jadi 2x2
                   Row(
@@ -130,13 +131,14 @@ class DashboardPage extends StatelessWidget {
             } else {
               //jika layar kecill
               return Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: const [
                   cardNama,
-                  SizedBox(height: 16),
+                  SizedBox(height: 12),
                   cardNim,
-                  SizedBox(height: 16),
+                  SizedBox(height: 12),
                   cardMatkul,
-                  SizedBox(height: 16),
+                  SizedBox(height: 12),
                   cardKelas,
                 ],
               );
@@ -162,10 +164,9 @@ class DashboardCard extends StatelessWidget {
       child: Card(
         elevation: 2,
         child: Container(
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-          ),
+          width: double.infinity,
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
