@@ -1,12 +1,14 @@
-# dashboard-responsif
-![dashboard-responsif](lib/dashboard-responsif.dart)
-<img src="screenshots/resposifitas.png" alt="tugas-utama" style="max-width: 500px; width: 100%;"/>
-
 # eksperime-warm-up
-![tugas-utama](lib/eksperime-warm-up.dart)
+File: [tugas-utama](lib/eksperime-warm-up.dart)
+
+# dashboard-responsif
+File: [dashboard-responsif](lib/dashboard-responsif.dart)
 
 # Tugas utama
-![tugas-utama](lib/main.dart)
+File: [tugas-utama](lib/main.dart)
+<img src="screenshots/main.png" alt="tugas-utama" style="max-width: 500px; width: 100%;"/>
+
+---
 
 # AI Prompt Challenge
 ## Prompt desain
@@ -45,11 +47,11 @@
 # Refleksi
 1. Apa perbedaan cara berpikir imperative dan declarative saat membangun UI?
    Untuk imperatif itu seperti memberi perintah langkah demi langkah, sedangkan deklaratif hanya mendeskripsikan hasil akhir yang diinginkan.
-3. Kapan Expanded membantu dan kapan penggunaannya justru menghasilkan layout error?
+2. Kapan Expanded membantu dan kapan penggunaannya justru menghasilkan layout error?
    Penggunaan expanded berguna untuk membagi sisa ruang kosong di dalam Row atau Column yang ukurannya sudah pasti. Namun, akan error jika dipakai di dalam widget yang ukurannya tak terbatas.
-5. Bagaimana breakpoint dan theme memengaruhi pengalaman pengguna?
+3. Bagaimana breakpoint dan theme memengaruhi pengalaman pengguna?
    Jadi breakpoint itu membuat tata letak otomatis menyesuaikan diri agar tetap rapi dan mudah dibaca di berbagai ukuran layar, sedangkan theme menjaga konsistensi warna dan huruf sekaligus mendukung fitur seperti dark mode agar aplikasi nyaman saat dipakai.
-7. Apa yang Anda verifikasi dari rekomendasi AI setelah tugas inti selesai?
+4. Apa yang Anda verifikasi dari rekomendasi AI setelah tugas inti selesai?
    Memastikan ketepatan responsivitas breakpoint tanpa overflow, kesesuaian penggunaan widget yang diinstruksikan, aspek aksesibilitas, kestabilan API Flutter yang digunakan dan keberhasilan pengujian otomatis (flutter test) pada berbagai ukuran layar.
 
 
