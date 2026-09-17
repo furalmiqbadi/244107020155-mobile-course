@@ -14,6 +14,7 @@
 
 ### Alur Kerja
 
+1
 StatsPage (ConsumerWidget)
 │
 ├── ref.watch(statsProvider)
@@ -28,6 +29,7 @@ StatsPage (ConsumerWidget)
 │ └── random >= 0.3? → return 3 StatItem → UI: ListView
 │
 └── Tombol "Coba Lagi" → ref.read(...notifier).retry()
+1
 
 ### Hasil Test
 
