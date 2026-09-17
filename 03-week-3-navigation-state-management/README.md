@@ -1,5 +1,5 @@
-# Refactoring dan testing
-## Checklist Verifikasi Mandiri
+## Refactoring dan testing
+### Checklist Verifikasi Mandiri
 - [x] **Navigasi GoRouter**: Berhasil pindah halaman (ToDo <-> Stats) via NavigationBar, state Riverpod tetap bertahan karena ProviderScope di root.
 - [x] **Refactoring Widget**: TodoTile dipisah ke folder `widgets/` untuk menghindari code-smell (file terlalu panjang).
 - [x] **Provider Turunan**: Berhasil membuat `unfinishedTodosProvider` menggunakan `.where()` untuk memfilter data secara reaktif.
@@ -8,12 +8,12 @@
 - [x] **Dokumentasi AI**: Prompt, hasil generate, dan hasil verifikasi disimpan rapi di folder `docs/`.
 
 
-# Dokumentasi AI
+## Dokumentasi AI
 Folder: [Dokumentasi-AI](docs/)
 
-# Tugas dan Refleksi
+## Tugas dan Refleksi
 Folder: [tugas](lib/)
-## Refleksi
+### Refleksi
 1. Kapan setState masih cukup, dan kapan state harus naik ke Riverpod? 
     setState masih cocok jika untuk state lokal satu widget misalnya status tombol atau form validation di satu halaman. Tapi jika data harus dibagi ke halaman lain kayak daftar ToDo yang muncul di Home dan dihitung di Stats maka pakai Riverpod.
 2. Apa perbedaan context.go dan context.push, dan kapan masing-masing tepat digunakan?
@@ -23,7 +23,7 @@ Folder: [tugas](lib/)
 4. Bagian mana dari hasil AI yang Anda perbaiki, dan mengapa?
     Menambahkan dependency_overrides karena ada package yang tidak cocok dengan versi Flutter. Kemudian memisahkan kode ListTile jadi widget sendiri agar lebih rapi dan mudah di-maintain.
 
-## Checklist Verifikasi
+### Checklist Verifikasi
 - [x] **Navigasi GoRouter**: Berhasil pindah halaman (ToDo <-> Stats) via NavigationBar, state Riverpod tetap bertahan karena ProviderScope di root.
 - [x] **Refactoring Widget**: TodoTile dipisah ke folder `widgets/` untuk menghindari code-smell (file terlalu panjang).
 - [x] **Provider Turunan**: Berhasil membuat `unfinishedTodosProvider` menggunakan `.where()` untuk memfilter data secara reaktif.
