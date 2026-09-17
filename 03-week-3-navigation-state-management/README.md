@@ -52,6 +52,8 @@ Folder: [tugas](lib/)
 - [x] **Dokumentasi AI**: Prompt, hasil generate, dan hasil verifikasi disimpan rapi di folder `docs/`.
 
 ## Screenshoot
+### Analyze & Test
+<img src="screenshots/analyze-test.png" alt="Tampilan Awal" style="width: 30%;"/>
 ### Tampilan Awal
 <img src="screenshots/Todo-awal.png" alt="Tampilan Awal" style="width: 30%;"/>
 
@@ -62,4 +64,6 @@ Folder: [tugas](lib/)
     <img src="screenshots/succes.png" alt="Success" style="width: 30%; display: inline-block;"/>
 </div>
 
+### Tampilan Tugas
+<img src="screenshots/hasil-tugas.png" alt="Tampilan Awal" style="width: 30%;"/>
 
