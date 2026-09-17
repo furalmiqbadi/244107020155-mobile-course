@@ -14,7 +14,7 @@
 
 ### Alur Kerja
 
-1
+```text
 StatsPage (ConsumerWidget)
 │
 ├── ref.watch(statsProvider)
@@ -30,7 +30,7 @@ StatsPage (ConsumerWidget)
 │
 └── Tombol "Coba Lagi" → ref.read(...notifier).retry()
 1
-
+```
 ### Hasil Test
 
 00:00 +0: build() mengembalikan 3 item statistik saat berhasil
