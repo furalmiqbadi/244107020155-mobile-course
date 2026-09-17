@@ -32,7 +32,7 @@
 Folder: [Dokumentasi-AI](docs/)
 
 ## Tugas dan Refleksi
-Folder: [tugas](lib/)
+Folder: [Tugas](lib/)
 ### Refleksi
 1. Kapan setState masih cukup, dan kapan state harus naik ke Riverpod? 
     setState masih cocok jika untuk state lokal satu widget misalnya status tombol atau form validation di satu halaman. Tapi jika data harus dibagi ke halaman lain kayak daftar ToDo yang muncul di Home dan dihitung di Stats maka pakai Riverpod.
@@ -54,6 +54,7 @@ Folder: [tugas](lib/)
 ## Screenshoot
 ### Analyze & Test
 <img src="screenshots/analyze-test.png" alt="Tampilan Awal" style="width: 30%;"/>
+
 ### Tampilan Awal
 <img src="screenshots/Todo-awal.png" alt="Tampilan Awal" style="width: 30%;"/>
 
