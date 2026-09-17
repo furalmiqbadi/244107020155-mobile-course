@@ -53,11 +53,13 @@ Folder: [tugas](lib/)
 
 ## Screenshoot
 ### Tampilan Awal
-<img src="screenshots/Todo-awal.png" alt="Tampilan Awal" style="max-width: 500px; width: 30%;"/>
+<img src="screenshots/Todo-awal.png" alt="Tampilan Awal" style="width: 30%;"/>
 
 ### Loading, Error, Succes
-<img src="screenshots/loading.png" alt="Tampilan Awal" style="width: 30%;"/>
-<img src="screenshots/error.png" alt="Tampilan Awal" style="width: 30%;"/>
-<img src="screenshots/succes.png" alt="Tampilan Awal" style="width: 30%;"/>
+<div>
+    <img src="screenshots/loading.png" alt="Loading" style="width: 30%; display: inline-block; margin-right: 20px;"/>
+    <img src="screenshots/error.png" alt="Error" style="width: 30%; display: inline-block; margin-right: 20px;"/>
+    <img src="screenshots/succes.png" alt="Success" style="width: 30%; display: inline-block;"/>
+</div>
 
 
