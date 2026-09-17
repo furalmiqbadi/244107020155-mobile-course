@@ -53,4 +53,4 @@ Folder: [tugas](lib/)
 
 ## Screenshoot
 ### Tampilan Awal
-<img src="screenshots/Todo-awal.png" alt="Tampilan Awal" style="max-width: 500px; width: 100%;"/>
+<img src="screenshots/Todo-awal.png" alt="Tampilan Awal" style="max-width: 50px; width: 100%;"/>
