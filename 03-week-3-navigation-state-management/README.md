@@ -1,3 +1,23 @@
+<div align="center">
+  <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; border: 1px solid black;">
+    <tr>
+      <td style="border: none; text-align: left;"><b>Nama</b></td>
+      <td style="border: none; text-align: left;">:</td>
+      <td style="border: none; text-align: left;"><code>Abdul Ghofur Almiqbadi</code></td>
+    </tr>
+    <tr>
+      <td style="border: none; text-align: left;"><b>NIM</b></td>
+      <td style="border: none; text-align: left;">:</td>
+      <td style="border: none; text-align: left;"><code>244107020155</code></td>
+    </tr>
+    <tr>
+      <td style="border: none; text-align: left;"><b>Kelas</b></td>
+      <td style="border: none; text-align: left;">:</td>
+      <td style="border: none; text-align: left;"><code>TI-3F</code></td>
+    </tr>
+  </table>
+</div>
+
 ## Refactoring dan testing
 ### Checklist Verifikasi Mandiri
 - [x] Navigasi GoRouter: Berhasil pindah halaman (ToDo <-> Stats) via NavigationBar, state Riverpod tetap bertahan karena ProviderScope di root.

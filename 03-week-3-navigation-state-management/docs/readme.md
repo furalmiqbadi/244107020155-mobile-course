@@ -13,7 +13,7 @@
 | stats_notifier_test.dart | 4 unit test untuk notifier (sukses, gagal, retry, model equality)                               |
 
 ### Alur Kerja
-
+```text
 StatsPage (ConsumerWidget)
 │
 ├── ref.watch(statsProvider)
@@ -28,11 +28,13 @@ StatsPage (ConsumerWidget)
 │ └── random >= 0.3? → return 3 StatItem → UI: ListView
 │
 └── Tombol "Coba Lagi" → ref.read(...notifier).retry()
+```
 
 ### Hasil Test
-
+```text
 00:00 +0: build() mengembalikan 3 item statistik saat berhasil
 00:03 +1: build() melempar exception saat simulasi gagal (< 0.3)
 00:06 +2: retry() berhasil setelah error sebelumnya
 00:11 +3: StatItem equality bekerja berdasarkan isi, bukan referensi
 00:11 +4: All tests passed!
+```
