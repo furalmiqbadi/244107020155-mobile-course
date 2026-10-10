@@ -2,17 +2,17 @@ import 'dart:math';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-// model data untuk merepresentasikan satu item statistik
+// model satu item statistik
 class StatItem {
   const StatItem({required this.label, required this.value});
   final String label;
   final int value;
 
-  // override toString agar output mudah dibaca saat debugging atau testing
+  // biar gampang dibaca pas debugging
   @override
   String toString() => 'StatItem(label: $label, value: $value)';
 
-  // override equality agar dua objek dengan isi yang sama dianggap sama
+  // isi sama dianggap sama
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -22,28 +22,28 @@ class StatItem {
   int get hashCode => Object.hash(label, value);
 }
 
-// kelas notifier untuk mengelola state asinkron dari data statistik
+// notifier data statistik pura-pura dari server
 class StatsNotifier extends AsyncNotifier<List<StatItem>> {
-  // instance random yang bisa di-override untuk keperluan unit testing
+  // random bisa diganti pas testing
   final Random _random;
 
   StatsNotifier({Random? random}) : _random = random ?? Random();
 
-  // dipanggil otomatis saat provider pertama kali dibaca atau di-invalidate
+  // jalan otomatis pas pertama dibaca
   @override
   Future<List<StatItem>> build() => _fetchStats();
 
-  // simulasi pengambilan data dari server dengan delay dan kemungkinan error
+  // pura-pura fetch, delay 2 detik dan kadang gagal
   Future<List<StatItem>> _fetchStats() async {
-    // simulasi waktu tunggu jaringan selama 2 detik
+    // tunggu 2 detik kayak kena jaringan
     await Future.delayed(const Duration(seconds: 2));
 
-    // simulasi kegagalan server dengan probabilitas 30%
+    // 30 persen gagal
     if (_random.nextDouble() < 0.3) {
       throw Exception('Gagal mengambil data statistik dari server');
     }
 
-    // data statistik yang dikembalikan saat proses berhasil
+    // kalau sukses balik 3 item
     return const [
       StatItem(label: 'Pengguna Aktif', value: 1200),
       StatItem(label: 'Tugas Selesai', value: 340),
@@ -51,15 +51,15 @@ class StatsNotifier extends AsyncNotifier<List<StatItem>> {
     ];
   }
 
-  // mereset state ke loading dan mencoba fetch ulang secara aman
+  // coba lagi dari loading
   Future<void> retry() async {
     state = const AsyncLoading();
-    // guard menangkap exception dan mengubahnya menjadi AsyncError
+    // guard ubah exception jadi AsyncError
     state = await AsyncValue.guard(() => _fetchStats());
   }
 }
 
-// mendaftarkan notifier sebagai provider global untuk diakses oleh UI
+// daftarin providernya
 final statsProvider = AsyncNotifierProvider<StatsNotifier, List<StatItem>>(
   StatsNotifier.new,
 );

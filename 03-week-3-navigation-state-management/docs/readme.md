@@ -8,9 +8,9 @@
 
 | File                       | Fungsi                                                                                          |
 | -------------------------- | ----------------------------------------------------------------------------------------------- |
-| `stats_provider.dart`      | Model `StatItem` + `StatsNotifier` (AsyncNotifier) dengan delay 2 detik & 30% kemungkinan gagal |
-| `stats_page.dart`          | `ConsumerWidget` yang menangani 3 state: loading, error+retry, success (ListView 3 item)        |
-| `stats_notifier_test.dart` | 4 unit test untuk notifier (sukses, gagal, retry, model equality)                               |
+| stats_provider.dart      | Model StatItem + StatsNotifier (AsyncNotifier) dengan delay 2 detik & 30% kemungkinan gagal |
+| stats_page.dart          | ConsumerWidget yang menangani 3 state: loading, error+retry, success (ListView 3 item)        |
+| stats_notifier_test.dart | 4 unit test untuk notifier (sukses, gagal, retry, model equality)                               |
 
 ### Alur Kerja
 

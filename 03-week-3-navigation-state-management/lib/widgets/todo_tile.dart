@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../providers/todo_provider.dart';
 
-// widget terpisah untuk menampilkan satu item tugas agar lebih modular
+// widget pisah buat satu tugas biar build pendek
 class TodoTile extends StatelessWidget {
   final Todo todo;
   final VoidCallback onToggle;
@@ -17,16 +17,16 @@ class TodoTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      // checkbox untuk mengubah status tugas (selesai/belum)
+      // centang selesai atau belum
       leading: Checkbox(value: todo.done, onChanged: (_) => onToggle()),
-      // teks judul dengan coretan jika tugas sudah selesai
+      // judul dicoret kalau sudah selesai
       title: Text(
         todo.title,
         style: TextStyle(
           decoration: todo.done ? TextDecoration.lineThrough : null,
         ),
       ),
-      // tombol hapus untuk menghapus tugas dari daftar
+      // tombol hapus
       trailing: IconButton(icon: const Icon(Icons.delete), onPressed: onDelete),
     );
   }

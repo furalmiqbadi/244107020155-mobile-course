@@ -4,29 +4,26 @@ import 'package:go_router/go_router.dart';
 import '../providers/todo_provider.dart';
 import '../widgets/todo_tile.dart';
 
-// halaman utama untuk menampilkan dan mengelola daftar tugas
 class TodoPage extends ConsumerWidget {
   const TodoPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // ref.watch digunakan di build agar UI otomatis ter-rebuild saat state berubah
     final todos = ref.watch(todoListProvider);
-    // provider turunan untuk menampilkan jumlah tugas yang belum selesai
+    // provider turunan buat hitung yang belum selesai
     final unfinishedTodos = ref.watch(unfinishedTodosProvider);
 
     return Scaffold(
       appBar: AppBar(
         title: Text('ToDo (${unfinishedTodos.length} belum selesai)'),
       ),
-      // menampilkan pesan kosong jika belum ada tugas, sebaliknya tampilkan list
       body: todos.isEmpty
           ? const Center(child: Text('Belum ada tugas'))
           : ListView.builder(
               itemCount: todos.length,
               itemBuilder: (context, index) => TodoTile(
                 todo: todos[index],
-                // ref.read digunakan di callback karena tidak perlu memicu rebuild
+                // ref.read di callback biar nggak rebuild
                 onToggle: () =>
                     ref.read(todoListProvider.notifier).toggle(index),
                 onDelete: () =>
@@ -37,11 +34,11 @@ class TodoPage extends ConsumerWidget {
         onPressed: () => _showAddDialog(context, ref),
         child: const Icon(Icons.add),
       ),
-      // navigation bar untuk berpindah antar halaman utama
+      // navbar pindah tab utama
       bottomNavigationBar: NavigationBar(
         selectedIndex: 0,
         onDestinationSelected: (index) {
-          // context.go mengganti stack navigasi (cocok untuk tab utama)
+          // go ganti stack, cocok buat tab
           if (index == 0) context.go('/');
           if (index == 1) context.go('/stats');
         },
@@ -53,7 +50,6 @@ class TodoPage extends ConsumerWidget {
     );
   }
 
-  // menampilkan dialog untuk menambahkan tugas baru ke dalam daftar
   void _showAddDialog(BuildContext context, WidgetRef ref) {
     final controller = TextEditingController();
     showDialog(
@@ -69,7 +65,6 @@ class TodoPage extends ConsumerWidget {
           FilledButton(
             onPressed: () {
               if (controller.text.trim().isNotEmpty) {
-                // menambahkan tugas baru melalui notifier lalu tutup dialog
                 ref.read(todoListProvider.notifier).add(controller.text.trim());
               }
               Navigator.pop(context);

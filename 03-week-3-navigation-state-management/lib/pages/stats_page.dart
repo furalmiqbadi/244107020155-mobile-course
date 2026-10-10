@@ -3,22 +3,21 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../providers/stats_provider.dart';
 
-// halaman statistik yang menampilkan data dari server dengan penanganan state asinkron
+// halaman statistik 3 state
 class StatsPage extends ConsumerWidget {
   const StatsPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // ref.watch memantau perubahan state asinkron dan memicu rebuild UI
     final statsAsync = ref.watch(statsProvider);
 
     return Scaffold(
       appBar: AppBar(title: const Text('Statistik')),
-      // menangani tiga kondisi state asinkron: loading, error, dan success
+      // loading, error, dan sukses
       body: statsAsync.when(
-        // menampilkan indikator loading saat data sedang diambil
+        // lagi loading
         loading: () => const Center(child: CircularProgressIndicator()),
-        // menampilkan pesan error dan tombol retry saat terjadi kegagalan
+        // error dan tombol coba lagi
         error: (err, stack) => Center(
           child: Padding(
             padding: const EdgeInsets.all(24),
@@ -30,7 +29,7 @@ class StatsPage extends ConsumerWidget {
                 Text('$err', textAlign: TextAlign.center),
                 const SizedBox(height: 16),
                 FilledButton.icon(
-                  // ref.read digunakan di callback untuk memanggil retry tanpa rebuild
+                  // ref.read di callback biar nggak rebuild
                   onPressed: () => ref.read(statsProvider.notifier).retry(),
                   icon: const Icon(Icons.refresh),
                   label: const Text('Coba Lagi'),
@@ -39,7 +38,7 @@ class StatsPage extends ConsumerWidget {
             ),
           ),
         ),
-        // menampilkan daftar statistik saat data berhasil dimuat
+        // sukses 3 item
         data: (stats) => ListView.builder(
           itemCount: stats.length,
           itemBuilder: (context, index) {
@@ -56,11 +55,11 @@ class StatsPage extends ConsumerWidget {
           },
         ),
       ),
-      // navigation bar untuk berpindah antar halaman utama
+      // navbar pindah tab utama
       bottomNavigationBar: NavigationBar(
         selectedIndex: 1,
         onDestinationSelected: (index) {
-          // context.go mengganti stack navigasi (cocok untuk tab utama)
+          // go ganti stack, cocok buat tab
           if (index == 0) context.go('/');
           if (index == 1) context.go('/stats');
         },

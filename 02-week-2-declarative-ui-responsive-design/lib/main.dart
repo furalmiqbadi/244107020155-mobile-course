@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-/// Breakpoint untuk beralih dari 1 kolom ke 2 kolom.
+// breakpoint pindah 1 kolom ke 2 kolom
 const double kWideBreakpoint = 600;
 
 void main() => runApp(const DashboardApp());
@@ -14,27 +14,27 @@ class DashboardApp extends StatefulWidget {
 }
 
 class _DashboardAppState extends State<DashboardApp> {
-  bool isDark = false; //buat darkmode
+  bool isDark = false; // buat darkmode
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, //hapus debug
+      debugShowCheckedModeBanner: false, // hapus debug
       theme: ThemeData(
         useMaterial3: true,
         colorSchemeSeed: Colors.indigo,
         brightness: Brightness.light,
-      ), //light mode
+      ), // light mode
       darkTheme: ThemeData(
         useMaterial3: true,
         brightness: Brightness.dark,
         colorSchemeSeed: Colors.indigo,
-      ), //dark mode
+      ), // dark mode
       themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
       home: DashboardPage(
         isDark: isDark,
         onDarkChanged: (value) => setState(() => isDark = value),
-      ), //status theme mode
+      ), // status theme mode
     );
   }
 }
@@ -51,7 +51,7 @@ class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //navbar
+      // navbar
       appBar: AppBar(
         title: Row(
           children: [
@@ -87,7 +87,7 @@ class DashboardPage extends StatelessWidget {
         ],
       ),
 
-      //content
+      // content
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: LayoutBuilder(
@@ -105,12 +105,12 @@ class DashboardPage extends StatelessWidget {
             );
             const cardKelas = DashboardCard(title: 'Kelas', value: 'TI-3F');
 
-            //untuk layar lebarr
+            // untuk layar lebar
             if (isWide) {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  //jadi 2x2
+                  // jadi 2x2
                   Row(
                     children: const [
                       Expanded(child: cardNama),
@@ -129,7 +129,7 @@ class DashboardPage extends StatelessWidget {
                 ],
               );
             } else {
-              //jika layar kecill
+              // jika layar kecil
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: const [
@@ -150,7 +150,7 @@ class DashboardPage extends StatelessWidget {
   }
 }
 
-//widget card
+// widget card
 class DashboardCard extends StatelessWidget {
   const DashboardCard({required this.title, required this.value, super.key});
   final String title;
