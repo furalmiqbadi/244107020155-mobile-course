@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../data/providers.dart';
 
 // demo cache-first, tampilkan cache lokal seketika,
-// refresh dari jaringan di background dan simpan hasilnya.
 class CachedPostsPage extends ConsumerWidget {
   const CachedPostsPage({super.key});
 

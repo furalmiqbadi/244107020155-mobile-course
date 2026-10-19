@@ -3,8 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../providers/notes_providers.dart';
 
-// detail membaca dari repository lokal via noteDetailProvider,
-// bukan dari state halaman list.
+// detail membaca dari repository lokal via noteDetailProvider
 class NoteDetailPage extends ConsumerWidget {
   const NoteDetailPage({super.key, required this.noteId});
 

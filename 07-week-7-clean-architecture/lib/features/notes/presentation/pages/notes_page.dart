@@ -7,7 +7,6 @@ import '../providers/notes_providers.dart';
 import '../../../../../data/providers.dart';
 
 // halaman utama, tetap berfungsi penuh dalam mode pesawat.
-// menampilkan badge jumlah catatan yang belum tersinkron (dirty).
 class NotesPage extends ConsumerWidget {
   const NotesPage({super.key});
 

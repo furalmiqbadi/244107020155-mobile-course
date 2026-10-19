@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../features/notes/domain/entities/note.dart';
 
-// baris catatan tersendiri dengan badge "belum tersinkron"
-// bila note.dirty true (refactoring challenge no.1).
+// baris catatan tersendiri dengan badge belum tersinkron
 class NoteTile extends StatelessWidget {
   const NoteTile({super.key, required this.note, this.onTap, this.onDelete});
 
