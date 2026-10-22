@@ -4,8 +4,8 @@ File: [tugas-utama](lib/main.dart)
 Aplikasi daftar data dari REST API menggunakan Dio terpusat, repository pattern, dan Riverpod AsyncValue, ditambah pagination infinite scroll.
 
 # Tugas utama
-File: [post_list_page](lib/pages/post_list_page.dart) | [paged_post_page](lib/pages/paged_post_page.dart) | [post_detail_page](lib/pages/post_detail_page.dart)
-<img src="screenshots/online.png" alt="daftar-posts" style="max-width: 300px; width: 100%;"/>
+File: [post_list_page](lib/pages/post_list_page.dart) | [paged_post_page](lib/pages/paged_post_page.dart)
+<img src="screenshots/online.png" alt="daftar-posts" sUpdatetyle="max-width: 300px; width: 100%;"/>
 
 Daftar posts tampil setelah loading, lengkap dengan pull-to-refresh dan Bottom Nav.
 
