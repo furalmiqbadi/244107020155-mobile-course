@@ -1,5 +1,5 @@
 # eksperimen-warm-up
-File: [eksperime-warm-up](lib/eksperime-warm-up.dart)
+File: [eksperimen-warm-up](lib/eksperimen-warm-up.dart)
 
 # dashboard-responsif
 File: [dashboard-responsif](lib/dashboard-responsif.dart)

@@ -5,19 +5,19 @@ Aplikasi daftar data dari REST API menggunakan Dio terpusat, repository pattern,
 
 # Tugas utama
 File: [post_list_page](lib/pages/post_list_page.dart) | [paged_post_page](lib/pages/paged_post_page.dart) | [post_detail_page](lib/pages/post_detail_page.dart)
-<img src="screenshots/list-success.png" alt="daftar-posts" style="max-width: 300px; width: 100%;"/>
+<img src="screenshots/online.png" alt="daftar-posts" style="max-width: 300px; width: 100%;"/>
 
 Daftar posts tampil setelah loading, lengkap dengan pull-to-refresh dan Bottom Nav.
 
 ## State error + retry
 File: [network_errors](lib/data/network_errors.dart)
-<img src="screenshots/error-retry.png" alt="error-retry" style="max-width: 300px; width: 100%;"/>
+<img src="screenshots/offline.png" alt="error-retry" style="max-width: 300px; width: 100%;"/>
 
 Mmenampilkan pesan "Tidak dapat terhubung ke server" saat tidak ada internet beserta tombol coba lagi.
 
 ## Pagination (infinite scroll, 10 per halaman)
 File: [paged_posts](lib/data/paged_posts.dart) | [post_repository](lib/data/repositories/post_repository.dart)
-<img src="screenshots/paged-scroll.png" alt="paged-scroll" style="max-width: 300px; width: 100%;"/>
+<img src="screenshots/infinite-scroll.png" alt="paged-scroll" style="max-width: 300px; width: 100%;"/>
 
 Saat scroll mendekati bawah, halaman berikutnya dimuat otomatis. Ada guard agar request ganda tidak terjadi.
 
@@ -40,8 +40,8 @@ Folder: [Dokumentasi-AI](docs/)
 
 ## Verification prompt
 Bukti AI Challenge berjalan (Comments App): error saat offline dan sukses menampilkan comments.
-<img src="screenshots/ai-comments-offline.png" alt="ai-comments-offline" style="max-width: 300px; width: 100%;"/>
-<img src="screenshots/ai-comments-success.png" alt="ai-comments-success" style="max-width: 300px; width: 100%;"/>
+<img src="screenshots/ai-offline.png" alt="ai-comments-offline" style="max-width: 300px; width: 100%;"/>
+<img src="screenshots/ai-online.png" alt="ai-comments-success" style="max-width: 300px; width: 100%;"/>
 
 ## Yang diperbaiki dari hasil AI
 1. Cast langsung (json['title']) menjadi cast defensif, karena API dapat mengirim null sehingga aplikasi crash.

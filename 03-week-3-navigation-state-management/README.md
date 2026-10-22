@@ -43,14 +43,6 @@ Folder: [tugas](lib/)
 4. Bagian mana dari hasil AI yang Anda perbaiki, dan mengapa?
    Ditambahkan dependency_overrides karena ada package yang tidak cocok dengan versi Flutter yang dipakai. Kemudian ListTile dipisahkan menjadi widget sendiri agar kode lebih rapi dan mudah dirawat.
 
-### Checklist Verifikasi
-- [x] Navigasi GoRouter: Berhasil pindah halaman (ToDo <-> Stats) via NavigationBar, state Riverpod tetap bertahan karena ProviderScope di root.
-- [x] Refactoring Widget: TodoTile dipisah ke folder widgets/ agar file tidak terlalu panjang dan mudah dirawat.
-- [x] Provider Turunan: Berhasil membuat unfinishedTodosProvider menggunakan .where() untuk memfilter data secara reaktif.
-- [x] UI AsyncValue: StatsPage menangani loading, error (dengan retry), dan success dengan benar.
-- [x] Testing & Quality: flutter analyze bersih dari warning, dan flutter test berhasil mensimulasikan interaksi user (menambah tugas).
-- [x] Dokumentasi AI: Prompt, hasil generate, dan hasil verifikasi disimpan rapi di folder docs/.
-
 # Screenshot
 ![todo-awal](screenshots/todo-awal.png)
 ![loading](screenshots/loading.png)

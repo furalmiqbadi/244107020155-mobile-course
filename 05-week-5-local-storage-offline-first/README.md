@@ -6,7 +6,7 @@ File: [settings-page](lib/pages/settings_page.dart)
 
 # Tugas utama
 File: [tugas-utama](lib/main.dart)
-<img src="screenshots/catatan-saat-offline.png" alt="tugas-utama" style="max-width: 500px; width: 100%;"/>
+<img src="screenshots/saat-offline.png" alt="tugas-utama" style="max-width: 500px; width: 100%;"/>
 
 ---
 
@@ -40,8 +40,8 @@ Pilih SharedPreferences jika datanya nilai kecil primitif (misal: tema gelap/ter
 Pilih sqflite jika datanya koleksi 1000+ baris (misal: daftar catatan dari database) yang butuh query, update per-baris, dan antrean sync.
 
 ## Verification prompt
-![badge-sebelum-sync](screenshots/badge-sebelum-sync.png)
-![badge-sesudah-sync](screenshots/badge-sesudah-sync.png)
+![badge-sebelum-sync](screenshots/sebelum-sync.png)
+![badge-sesudah-sync](screenshots/sesudah-sync.png)
 ![sync-saat-offline](screenshots/sync-saat-offline.png)
 
 # Tugas dan Refleksi
